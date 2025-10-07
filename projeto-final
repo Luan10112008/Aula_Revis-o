@@ -1,0 +1,33 @@
+// projeto-final/app.js
+
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+const PORT = 3005;
+
+// Middlewares básicos
+app.use(express.json()); // Para interpretar JSON no corpo das requisições
+app.use(express.urlencoded({ extended: true })); // Para interpretar dados urlencoded (ex: formulários)
+
+// TODO: Configure middlewares adicionais, como cors, autenticação, etc.
+
+// TODO: Implemente sistema de usuários com JSON (armazenar e manipular dados dos usuários)
+
+// TODO: Crie rotas públicas e protegidas, com autenticação
+
+// TODO: Implemente sistema de upload de arquivos (ex: usando multer)
+
+// TODO: Implemente tratamento de erros centralizado
+
+// TODO: Crie documentação das rotas em /docs
+
+// Exemplo simples de rota pública
+app.get('/', (req, res) => {
+  res.send('Projeto Final - API rodando!');
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Projeto Final rodando em http://localhost:${PORT}`);
+});
